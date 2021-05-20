@@ -641,6 +641,14 @@
       "unitsInStock": "50",
       "categoryId": 2,
       "id": 82
+    },
+    {
+      "productName": "Fanta",
+      "categoryId": 7,
+      "unitPrice": "2",
+      "quantityPerUnit": "100",
+      "unitsInStock": "300",
+      "id": 83
     }
   ],
   "categories": [

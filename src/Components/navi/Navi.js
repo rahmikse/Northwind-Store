@@ -15,6 +15,7 @@ import {
 } from 'reactstrap';
 import CartSummary from "../cart/CartSummary";
 import {Link} from "react-router-dom";
+import Login from "../register/Login"
 
 class Navi extends Component {
 
@@ -40,6 +41,9 @@ class Navi extends Component {
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink><Link to="/login">Sıgn In</Link></NavLink>
+                            </NavItem>
                             <NavItem>
                                 <NavLink ><Link to="/saveProduct">Ürün Ekle</Link></NavLink>
                             </NavItem>

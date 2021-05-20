@@ -6,15 +6,18 @@ import {Route, Switch} from "react-router-dom"
 import CartDetail from "../cart/CartDetail";
 import AddOrUpdateProduct from "../products/AddOrUpdateProduct";
 import NotFound from "../common/NotFound";
+import Login from "../register/Login"
 function App() {
     return (
         <Container className={App}>
             <Navi/>
             <Switch>
+
                 <Route path="/" exact component={DashBord}/>
                 <Route path="/product"  component={DashBord}/>
                 <Route path="/saveProduct/:productId"  component={AddOrUpdateProduct} />
                 <Route path="/saveProduct"  component={AddOrUpdateProduct} />
+                <Route path="/login"  component={Login} />
                 <Route path="/cart"  component={CartDetail} />
                 <Route component={NotFound} />
 
