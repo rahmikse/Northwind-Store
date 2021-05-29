@@ -37,7 +37,7 @@ class Navi extends Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand ><Link to="/">Northwind Mağazası</Link></NavbarBrand>
+                    <NavbarBrand ><Link to="/product">Northwind Mağazası</Link></NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.isOpen} navbar>
                         <Nav className="ml-auto" navbar>

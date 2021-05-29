@@ -1,30 +1,35 @@
-import React from "react";
+import React,{Component} from "react";
 import Navi from "../navi/Navi";
 import {Container} from "reactstrap";
 import DashBord from "./DashBord";
-import {Route, Switch} from "react-router-dom"
+import {Route, Switch,Redirect} from "react-router-dom"
 import CartDetail from "../cart/CartDetail";
 import AddOrUpdateProduct from "../products/AddOrUpdateProduct";
 import NotFound from "../common/NotFound";
-import Login from "../register/Login"
-function App() {
-    return (
-        <Container className={App}>
-            <Navi/>
-            <Switch>
+import Form from "../register/Form";
+class App extends Component  {
+    render() {
+        return (
 
-                <Route path="/" exact component={DashBord}/>
-                <Route path="/product"  component={DashBord}/>
-                <Route path="/saveProduct/:productId"  component={AddOrUpdateProduct} />
-                <Route path="/saveProduct"  component={AddOrUpdateProduct} />
-                <Route path="/login"  component={Login} />
-                <Route path="/cart"  component={CartDetail} />
-                <Route component={NotFound} />
+            <Container className={App}>
+                <Navi/>
 
-            </Switch>
+                <Switch>
+                    <Route path="/" exact component={DashBord}/>
+                    <Route path="/product"  component={DashBord}/>
+                    <Route path="/saveProduct/:productId"  component={AddOrUpdateProduct} />
+                    <Route path="/saveProduct"  component={AddOrUpdateProduct} />
+                    <Route path="/login"  component={Form} />
+                    <Route path="/cart"  component={CartDetail} />
+                    <Route component={NotFound} />
 
-        </Container>
-    );
+                </Switch>
+
+            </Container>
+        );
+    }
+
+
 }
 
 export default App;
